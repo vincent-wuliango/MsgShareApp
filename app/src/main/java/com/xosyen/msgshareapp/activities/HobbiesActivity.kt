@@ -10,6 +10,10 @@ import com.xosyen.msgshareapp.databinding.ActivityHobbiesBinding
 class HobbiesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHobbiesBinding
 
+    companion object {
+        val TAG: String = HobbiesActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHobbiesBinding.inflate(layoutInflater)

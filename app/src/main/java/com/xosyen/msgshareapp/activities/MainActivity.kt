@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.xosyen.msgshareapp.Constants
 import com.xosyen.msgshareapp.databinding.ActivityMainBinding
 import com.xosyen.msgshareapp.showToast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    companion object {
+        val TAG: String = MainActivity::class.java.simpleName
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.btnShowToast.setOnClickListener {
-            Log.i("MainActivity", "Button was clicked!")
+            Log.i(TAG, "Button was clicked!")
             showToast("Button was clicked!", Toast.LENGTH_LONG)
         }
 
@@ -26,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val message: String = binding.etUserMessage.text.toString()
             val intent = Intent(this, SecondActivity::class.java)
 
-            intent.putExtra("user_message", message)
+            intent.putExtra(Constants.USER_MSG_KEY, message)
 
             startActivity(intent)
         }

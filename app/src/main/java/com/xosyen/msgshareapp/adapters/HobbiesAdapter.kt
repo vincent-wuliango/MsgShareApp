@@ -10,14 +10,21 @@ import com.xosyen.msgshareapp.models.Hobby
 import com.xosyen.msgshareapp.databinding.ListItemBinding
 import com.xosyen.msgshareapp.showToast
 
-class HobbiesAdapter(val context: Context, private val hobbiesList: List<Hobby>): RecyclerView.Adapter<HobbiesAdapter.HobbiesHolder>() {
-    inner class HobbiesHolder(private val itemBinding: ListItemBinding): RecyclerView.ViewHolder(itemBinding.root) {
+class HobbiesAdapter(val context: Context, private val hobbiesList: List<Hobby>) : RecyclerView.Adapter<HobbiesAdapter.HobbiesHolder>() {
+
+    companion object {
+        val TAG: String = HobbiesAdapter::class.java.simpleName
+    }
+
+    inner class HobbiesHolder(private val itemBinding: ListItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
         private var currentHobby: Hobby? = null
         private var currentPosition: Int = 0
 
         init {
             itemView.setOnClickListener {
-                context.showToast(currentHobby!!.title + " Clicked!")
+                currentHobby?.let {
+                    context.showToast(currentHobby!!.title + " Clicked!")
+                }
             }
 
             itemBinding.imgShare.setOnClickListener {
@@ -41,7 +48,8 @@ class HobbiesAdapter(val context: Context, private val hobbiesList: List<Hobby>)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HobbiesHolder {
-        val itemBinding = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemBinding =
+            ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return HobbiesHolder(itemBinding)
     }
 
