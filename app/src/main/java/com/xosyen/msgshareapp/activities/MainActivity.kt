@@ -1,4 +1,4 @@
-package com.xosyen.msgshareapp
+package com.xosyen.msgshareapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -39,7 +39,11 @@ class MainActivity : AppCompatActivity() {
             intent.type = "text/plain"
 
             startActivity(Intent.createChooser(intent, "Share to: "))
+        }
 
+        binding.btnRecyclerViewDemo.setOnClickListener {
+            val intent = Intent(this, HobbiesActivity::class.java)
+            startActivity(intent)
         }
     }
 }

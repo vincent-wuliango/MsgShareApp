@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/SYeN-Projects/Programs/Android-App-Development-Kotlin/MsgShareApp/app/src/main/res/layout/activity_hobbies.xml" value="0.21" />
         <entry key="..\:/Documents/SYeN-Projects/Programs/Android-App-Development-Kotlin/MsgShareApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Documents/SYeN-Projects/Programs/Android-App-Development-Kotlin/MsgShareApp/app/src/main/res/layout/activity_second.xml" value="0.25" />
+        <entry key="..\:/Documents/SYeN-Projects/Programs/Android-App-Development-Kotlin/MsgShareApp/app/src/main/res/layout/list_item.xml" value="0.17074275362318841" />
       </map>
     </option>
   </component>

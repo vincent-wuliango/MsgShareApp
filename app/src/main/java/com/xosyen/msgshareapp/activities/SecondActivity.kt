@@ -1,4 +1,4 @@
-package com.xosyen.msgshareapp
+package com.xosyen.msgshareapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
