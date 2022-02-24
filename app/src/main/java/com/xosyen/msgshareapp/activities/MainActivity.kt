@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.xosyen.msgshareapp.databinding.ActivityMainBinding
+import com.xosyen.msgshareapp.showToast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnShowToast.setOnClickListener {
             Log.i("MainActivity", "Button was clicked!")
-            Toast.makeText(this, "Button was clicked!", Toast.LENGTH_SHORT).show()
+            showToast("Button was clicked!")
         }
 
         binding.btnSendMsgToNextActivity.setOnClickListener {
