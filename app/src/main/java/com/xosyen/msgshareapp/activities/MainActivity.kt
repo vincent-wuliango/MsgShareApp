@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.xosyen.msgshareapp.Constants
+import com.xosyen.msgshareapp.R
 import com.xosyen.msgshareapp.databinding.ActivityMainBinding
 import com.xosyen.msgshareapp.showToast
 
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnShowToast.setOnClickListener {
             Log.i(TAG, "Button was clicked!")
-            showToast("Button was clicked!", Toast.LENGTH_LONG)
+            showToast(resources.getString(R.string.btn_was_clicked), Toast.LENGTH_LONG)
         }
 
         binding.btnSendMsgToNextActivity.setOnClickListener {

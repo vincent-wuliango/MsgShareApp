@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_show_toast">Menampilkan Toast</string>
+    <string name="btn_move_to_next_activity">Menuju ke Halaman Berikutnya</string>
+    <string name="btn_share_to_apps">Membagikan ke Aplikasi Lain</string>
+    <string name="btn_hobbies">Tampilkan Hobi</string>
+    <string name="et_enter_message">Masukkan sebuah pesan</string>
+    <string name="btn_was_clicked">Tombol Diklik!</string>
+
+</resources>
