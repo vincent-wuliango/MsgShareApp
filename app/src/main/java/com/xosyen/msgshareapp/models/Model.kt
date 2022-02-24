@@ -1,4 +1,4 @@
-package com.xosyen.msgshareapp
+package com.xosyen.msgshareapp.models
 
 data class Hobby(var title: String)
 data class Dream(var title: String)
@@ -16,7 +16,7 @@ object Human {
 }
 
 object Supplier {
-    val hobbies = listOf<Hobby>(
+    val hobbies = listOf(
         Hobby("Swimming"),
         Hobby("Reading"),
         Hobby("Walking"),

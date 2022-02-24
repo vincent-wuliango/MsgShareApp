@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.xosyen.msgshareapp.Hobby
+import com.xosyen.msgshareapp.models.Hobby
 import com.xosyen.msgshareapp.databinding.ListItemBinding
 
-class HobbiesAdapter(val context: Context, val hobbiesList: List<Hobby>): RecyclerView.Adapter<HobbiesAdapter.HobbiesHolder>() {
-    inner class HobbiesHolder(val itemBinding: ListItemBinding): RecyclerView.ViewHolder(itemBinding.root) {
-        var currentHobby: Hobby? = null
-        var currentPosition: Int = 0
+class HobbiesAdapter(val context: Context, private val hobbiesList: List<Hobby>): RecyclerView.Adapter<HobbiesAdapter.HobbiesHolder>() {
+    inner class HobbiesHolder(private val itemBinding: ListItemBinding): RecyclerView.ViewHolder(itemBinding.root) {
+        private var currentHobby: Hobby? = null
+        private var currentPosition: Int = 0
 
         init {
             itemView.setOnClickListener {
