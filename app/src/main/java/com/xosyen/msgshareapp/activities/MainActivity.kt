@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnShowToast.setOnClickListener {
             Log.i("MainActivity", "Button was clicked!")
-            showToast("Button was clicked!")
+            showToast("Button was clicked!", Toast.LENGTH_LONG)
         }
 
         binding.btnSendMsgToNextActivity.setOnClickListener {
